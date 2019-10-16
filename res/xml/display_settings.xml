@@ -17,7 +17,7 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
+    xmlns:deltaotg="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/display_settings"
     settings:keywords="@string/keywords_display">
 
@@ -69,7 +69,7 @@
     <!-- Rotation -->
     <org.lineageos.internal.lineageparts.LineagePartsPreference
         android:key="rotation"
-        lineage:requiresFeature="android.hardware.sensor.accelerometer" />
+        deltaotg:requiresFeature="android.hardware.sensor.accelerometer" />
 
     <Preference
         android:key="color_mode"
@@ -90,7 +90,7 @@
 
     <org.lineageos.internal.lineageparts.LineagePartsPreference
         android:key="long_screen_settings"
-        lineage:requiresConfig="@*lineageos.platform:bool/config_haveHigherAspectRatioScreen" />
+        deltaotg:requiresConfig="@*lineageos.platform:bool/config_haveHigherAspectRatioScreen" />
 
     <Preference
         android:key="screensaver"
@@ -106,7 +106,7 @@
     <lineageos.preference.RemotePreference
         android:key="doze_device_settings"
         android:title="@string/ambient_display_screen_title"
-        lineage:replacesKey="ambient_display">
+        deltaotg:replacesKey="ambient_display">
         <intent
             android:action="org.lineageos.settings.device.DOZE_SETTINGS" />
     </lineageos.preference.RemotePreference>
@@ -152,14 +152,14 @@
         android:key="proximity_on_wake"
         android:title="@string/proximity_wake_title"
         android:summary="@string/proximity_wake_summary"
-        lineage:requiresConfig="@*lineageos.platform:bool/config_proximityCheckOnWake" />
+        deltaotg:requiresConfig="@*lineageos.platform:bool/config_proximityCheckOnWake" />
 
     <lineageos.preference.LineageSystemSettingSwitchPreference
         android:key="high_touch_sensitivity_enable"
         android:title="@string/high_touch_sensitivity_title"
         android:summary="@string/high_touch_sensitivity_summary"
         android:defaultValue="false"
-        lineage:requiresFeature="lineagehardware:FEATURE_HIGH_TOUCH_SENSITIVITY" />
+        deltaotg:requiresFeature="lineagehardware:FEATURE_HIGH_TOUCH_SENSITIVITY" />
 
     <!-- Use LineageParts for styles 
     <ListPreference
